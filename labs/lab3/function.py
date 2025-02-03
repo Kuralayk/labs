@@ -140,5 +140,3 @@ def guess_the_number():
             print(f"Good job, {name}! You guessed my number in {gues} guesses!")
             break
 guess_the_number()
-
-#14

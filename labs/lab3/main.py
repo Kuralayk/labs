@@ -8,4 +8,4 @@ print(f"Is '{word}' a palindrome?", is_palindrome(word))
 
 gram_value = 56
 ounce_value = grams_to_ounces(gram_value)
-print("ounce_value.2f")
+print(ounce_value)
