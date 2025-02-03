@@ -14,6 +14,7 @@ def fahrenheit_to_celsius(fahrenheit):
 fahrenheit_value = 45
 celsius_value = fahrenheit_to_celsius(fahrenheit_value)
 print(f"{fahrenheit_value} Fahrenheit is equal to {celsius_value:.2f} Celsius")
+
 #3
 def solve(numheads, numlegs):
     for chickens in range(numheads + 1):
@@ -30,6 +31,7 @@ if chickens is not None:
     print(f"Number of rabbits: {rabbits}")
 else:
     print("No solution found.")
+
 #4
 def is_prime(n):
     if n < 2:
@@ -45,22 +47,8 @@ def filter_prime(numbers):
 numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
 prime_numbers = filter_prime(numbers)
 print("Prime numbers:", prime_numbers)
+
 #5
-def is_prime(n):
-    if n < 2:
-        return False
-    for i in range(2, int(n ** 0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
-
-def filter_prime(numbers):
-    return [num for num in numbers if is_prime(num)]
-
-numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
-prime_numbers = filter_prime(numbers)
-print("Prime numbers:", prime_numbers)
-#6
 from itertools import permutations
 
 def print_permutations(s):
@@ -69,14 +57,15 @@ def print_permutations(s):
 
 s = input("Enter a string: ")
 print_permutations(s)
-#7
+
+#6
 def reverse_words(sentence):
     return ' '.join(sentence.split()[::-1])
 
 s = input("Enter a sentence: ")
 print(reverse_words(s))
 
-#8
+#7
 def has_33(nums):
     for i in range(len(nums) - 1):
         if nums[i] == 3 and nums[i + 1] == 3:
@@ -86,7 +75,7 @@ def has_33(nums):
 has_33([1, 3, 3])
 has_33([1, 3, 1, 3]) 
 has_33([3, 1, 3])
-#9
+#8
 def spy_game(nums):
     code = [0, 0, 7]
     for i in range(len(nums) - 2):
@@ -95,17 +84,17 @@ def spy_game(nums):
     return False
 spy_game([1,2,4,0,0,7,5]) 
 spy_game([1,0,2,4,0,5,7])
-spy_game([1,7,2,0,4,5,0]) 
-#10
-import math
+spy_game([1,7,2,0,4,5,0])
 
+#9
+import math
 def sphere_volume(radius):
     return (4/3) * math.pi * radius**3
-
 value = 6
 result = sphere_volume(value)
 print(result)
 
+#10
 def unique_elements(lst):
     unique_lst = []
     for item in lst:
@@ -115,18 +104,20 @@ def unique_elements(lst):
 result = unique_elements([5,6 , 4 ,4 ,4 ,2 , 6,9,7,5])
 print(result)
 
+#11
 def is_palindrome(s):
     s = s.replace(" ", "").lower()
     return s == s[::-1]
 print(is_palindrome("gfyd"))
 
+#12
 def histogram(lst):
     for value in lst:
         print('*' * value)
 histogram([4,9,7])
 
+#13
 import random
-
 def guess_the_number():
     print("Hello! What is your name?")
     name = input()
@@ -150,3 +141,4 @@ def guess_the_number():
             break
 guess_the_number()
 
+#14

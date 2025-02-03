@@ -35,6 +35,7 @@ movies = [
 #1
 for movie in movies:
     print(f"{movie['name']} has a high rating: {is_high_rated(movie)}")
+    
 #2
 high_rated = high_rated_movies(movies)
 print("High rated movies:", [movie["name"] for movie in high_rated])
