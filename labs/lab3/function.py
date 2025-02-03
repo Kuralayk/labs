@@ -5,7 +5,7 @@ def grams_to_ounces(grams):
 
 gram_value = 56
 ounce_value = grams_to_ounces(gram_value)
-print(f"{gram_value} grams is equal to {ounce_value:.2f} ounces")
+print("ounce_value.2f")
 
 #2
 def fahrenheit_to_celsius(fahrenheit):
@@ -13,25 +13,20 @@ def fahrenheit_to_celsius(fahrenheit):
     return celsius
 fahrenheit_value = 45
 celsius_value = fahrenheit_to_celsius(fahrenheit_value)
-print(f"{fahrenheit_value} Fahrenheit is equal to {celsius_value:.2f} Celsius")
+print(celsius_value)
 
 #3
 def solve(numheads, numlegs):
     for chickens in range(numheads + 1):
         rabbits = numheads - chickens
-        if (chickens * 2) + (rabbits * 4) == numlegs:
+        if (chickens * 2 + rabbits * 4) == numlegs:
             return chickens, rabbits
-    return None, None 
+    return None
 
 numheads = 35
 numlegs = 94
-chickens, rabbits = solve(numheads, numlegs)
-if chickens is not None:
-    print(f"Number of chickens: {chickens}")
-    print(f"Number of rabbits: {rabbits}")
-else:
-    print("No solution found.")
-
+result = solve(numheads, numlegs)
+print(result)  
 #4
 def is_prime(n):
     if n < 2:
@@ -42,11 +37,15 @@ def is_prime(n):
     return True
 
 def filter_prime(numbers):
-    return [num for num in numbers if is_prime(num)]
+    primes = []
+    for n in numbers:
+        if is_prime(n):
+            primes.append(n)
+    return primes
 
-numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
-prime_numbers = filter_prime(numbers)
-print("Prime numbers:", prime_numbers)
+numbers = list(map(int, input("Enter: ").split()))
+print(filter_prime(numbers))
+
 
 #5
 from itertools import permutations
@@ -60,10 +59,11 @@ print_permutations(s)
 
 #6
 def reverse_words(sentence):
-    return ' '.join(sentence.split()[::-1])
+    words = sentence.split()
+    return ' '.join(words[::-1])
+input_sentence = "We are ready"
+print(reverse_words(input_sentence))
 
-s = input("Enter a sentence: ")
-print(reverse_words(s))
 
 #7
 def has_33(nums):
@@ -108,12 +108,12 @@ print(result)
 def is_palindrome(s):
     s = s.replace(" ", "").lower()
     return s == s[::-1]
-print(is_palindrome("gfyd"))
+print(is_palindrome("gfy"))
 
 #12
 def histogram(lst):
-    for value in lst:
-        print('*' * value)
+    for num in lst:
+        print('*' * num)
 histogram([4,9,7])
 
 #13
@@ -122,22 +122,22 @@ def guess_the_number():
     print("Hello! What is your name?")
     name = input()
 
-    number_to_guess = random.randint(1, 20)
+    nums = random.randint(1, 20)
     print(f"Well, {name}, I am thinking of a number between 1 and 20.")
     
-    guesses_taken = 0
+    gues = 0
 
     while True:
         print("Take a guess.")
         guess = int(input())
-        guesses_taken += 1
+        gues += 1
 
-        if guess < number_to_guess:
+        if guess < nums:
             print("Your guess is too low.")
-        elif guess > number_to_guess:
+        elif guess > nums:
             print("Your guess is too high.")
         else:
-            print(f"Good job, {name}! You guessed my number in {guesses_taken} guesses!")
+            print(f"Good job, {name}! You guessed my number in {gues} guesses!")
             break
 guess_the_number()
 
