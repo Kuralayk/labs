@@ -15,8 +15,8 @@ pygame.font.init()
 font = pygame.font.Font(None, 36)  
 
 
-MUSIC_FOLDER = "music"
-playlist = [os.path.join(MUSIC_FOLDER, f) for f in os.listdir(MUSIC_FOLDER) if f.endswith(".mp3")]
+music_FOLDER = r"C:\Users\ilyas\OneDrive\Рабочий стол\Куралай\pp2\labs\music"
+playlist = [os.path.join(music_FOLDER, f) for f in os.listdir(music_FOLDER) if f.endswith(".mp3")]
 current_song_index = 0
 
 
