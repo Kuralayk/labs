@@ -82,7 +82,3 @@ while running:
 pygame.quit()
 sys.exit()
 
-background = pygame.image.load(r"C:\Users\ilyas\OneDrive\Рабочий стол\Куралай\pp2\labs\lab8\street.png")
-player_img = pygame.image.load(r"C:\Users\ilyas\OneDrive\Рабочий стол\Куралай\pp2\labs\lab8\Player.png")
-enemy_img = pygame.image.load(r"C:\Users\ilyas\OneDrive\Рабочий стол\Куралай\pp2\labs\lab8\Enemy.png")
-coin_img = pygame.image.load(r"C:\Users\ilyas\OneDrive\Рабочий стол\Куралай\pp2\labs\lab8\Coin.png")
