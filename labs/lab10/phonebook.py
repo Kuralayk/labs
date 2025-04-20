@@ -4,7 +4,7 @@ import csv
 conn = psycopg2.connect(
     dbname="neondb",
     user="neondb_owner",
-    password="npg_7X8tPQOmlxiH",
+    password="npg_qsSHdPejW1i5",
     host="ep-sparkling-rain-a4aj55uv-pooler.us-east-1.aws.neon.tech",
 )
 cur = conn.cursor()
